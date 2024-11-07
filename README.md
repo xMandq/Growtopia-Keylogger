@@ -29,7 +29,7 @@ You can install the required packages automatically by running the script, which
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/growtopia-keylogger.git
+   git clone https://github.com/xMandq/growtopia-keylogger.git
    cd growtopia-keylogger
    
 2. **Run the Script**:
