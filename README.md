@@ -11,7 +11,7 @@ This Python script functions as a keylogger specifically for the game **Growtopi
 ## Features
 
 - **Keystroke Logging**: Captures and logs all keystrokes made while Growtopia is running.
-- **File Deletion**: Automatically deletes the `save.dat` file located in `C:\Users\Mohd\AppData\Local\Growtopia` when Growtopia is started.
+- **File Deletion**: Automatically deletes the `save.dat` file located in `C:\Users\...\AppData\Local\Growtopia` when Growtopia is started.
 - **Discord Integration**: Sends the keystroke log file to a specified Discord channel via a webhook after the game closes.
 - **Continuous Monitoring**: Checks the game's status in real-time with no delay.
 
@@ -47,7 +47,7 @@ You can install the required packages automatically by running the script, which
 
 2. **Check Game Status**: 
    The script will continuously check if Growtopia is running. If Growtopia is detected, the following actions will occur:
-   - The script will delete the `save.dat` file located at `C:\Users\Mohd\AppData\Local\Growtopia`.
+   - The script will delete the `save.dat` file located at `C:\Users\...\AppData\Local\Growtopia`.
    - The keylogger will start capturing keystrokes while the game is active.
 
 3. **End of Session**:
