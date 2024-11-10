@@ -30,7 +30,7 @@ buffer = ""
 last_type_time = time.time()
 newline_delay = 2
 was_growtopia_running = False
-save_dat_file_path = r"C:\Users\Mohd\AppData\Local\Growtopia\save.dat"
+save_dat_file_path = rf"C:\Users\{os.getenv('USERNAME')}\AppData\Local\Growtopia\save.dat"
 
 def delete_save_file(file_path):
     """Delete the specified file if it exists."""
