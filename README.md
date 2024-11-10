@@ -1,4 +1,4 @@
-# Growtopia Keylogger and Save File Deletion Script
+# Growtopia Keylogger
 
 ## Overview
 
